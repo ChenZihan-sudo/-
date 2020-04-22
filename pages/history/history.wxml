@@ -1,0 +1,3 @@
+<!--pages/history/history.wxml-->
+<text>pages/history/history.wxml</text>
+<button bindtap="openid">获取OpenID</button>

@@ -1,0 +1,55 @@
+<input bindinput = "AdminAccount" placeholder="账户" />
+<input bindinput = "AdminPassword" placeholder="密码" password/>
+<button bindtap = "CheckAccount">登录</button>
+<!-- 上传文件 账户验证成功前不显示 -->
+<view hidden="{{UploadDisplay}}">
+    <view>暂不支持上传以.doc扩展名命名的文件</view>
+    <view>请上传例如.docx .pdf扩展名的文件</view>
+    <button bindtap = "UpLoad" >上传文件</button>
+</view>
+<!-- 上传文件完成后写上传数据库的json -->
+<view hidden="{{UploadOkDisplay}}">
+    <view>请输入索引名称(作者名称、分类)</view>
+    <view>作者名称(选填)</view>
+    <input placeholder="作者名称" bindinput="AuthorName"/>
+    <view>分类(必填)</view>
+    <radio-group bindchange="SortTag">
+        <radio wx:for="{{Radio}}" wx:key="RadioName" value="{{item.RadioName}}">
+            {{item.RadioName}}
+        </radio>
+    </radio-group>
+    <button bindtap="Check">确认</button>
+</view>
+<view hidden="{{CheckUpload}}">
+请确认如下信息:
+<view>可以更改标题名称，请将.docx/.pdf扩展名删去</view>
+<input bindinput="NameInput" placeholder="标题" value="{{Name}}"/>
+<view>上面是输入框可以更改</view>
+<view>作者:{{Author}}</view>
+<view>标题:{{Name}}</view>
+<view>{{Path}}</view>
+<view>{{Sort}}</view>
+<view>{{Time}}</view>
+<view>时间:{{DisplayTime}}</view>
+<button bindtap="UpDB">提交</button>
+
+</view>
+
+<view hidden="{{PreViewHidden}}">
+提交成功,请退出以重新上传文件
+<button bindtap="PreView">预览</button>
+<view  wx:for="{{Text}}" wx:key="Time">
+<!-- 导航至细节展示并传值 -->
+<navigator url="/pages/details/details?Link={{item.Path}}&Name={{item.Name}}&Author={{item.Author}}&Time={{item.Time}}" >
+<view>作者:{{item.Author}}</view>
+<view>名称:{{item.Name}}</view>
+<view>时间:{{item.Time}}</view>
+<view>路径:{{item.Path}}</view>
+<view>分类:{{item.Sort}}</view>
+</navigator>
+</view>
+</view>
+
+
+
+

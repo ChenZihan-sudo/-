@@ -1,0 +1,7 @@
+<view>因微信的奇葩机制,下载文件需要手动在浏览器中打开链接下载的说</view>
+<view>链接只有两小时下载有效期哦,请及时下载</view>
+<view>下载链接:</view>
+<text selectable>{{OutPath}}</text>
+<view hidden="{{hidden}}">
+<button bindtap="CopyOutPath">复制到剪切板</button>
+</view>

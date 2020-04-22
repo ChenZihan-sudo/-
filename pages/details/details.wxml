@@ -1,0 +1,8 @@
+<view>名称:{{Name}}</view>
+<view>作者:{{AuthorName}}</view>
+<view>时间:{{Time}}</view>
+<view>路径:{{Path}}</view>
+<view>大小:{{Size}}</view>
+<button bindtap="OpenText">打开</button>
+<button bindtap="Share" open-type="share">分享</button>
+<button bindtap="Download">下载</button>

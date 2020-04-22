@@ -1,0 +1,13 @@
+<input bindinput="SearchInput" placeholder="请输入你想搜索的文本内容" />
+<button bindtap="SearchSubmit">确认</button>
+<!-- 获取文本列表 -->
+<view wx:for="{{TextList}}" wx:key="Time">
+    <!-- 导航至细节展示并传值 -->
+    <navigator url="/pages/details/details?Link={{item.Path}}&Name={{item.Name}}&Author={{item.Author}}&Time={{item.DisplayTime}}&Size={{item.Size}}">
+        <view>作者:{{item.Author}}</view>
+        <view>名称:{{item.Name}}</view>
+        <view>时间:{{item.DisplayTime}}</view>
+        <view>路径:{{item.Path}}</view>
+        <view>分类:{{item.Sort}}</view>
+    </navigator>
+</view>

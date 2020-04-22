@@ -1,0 +1,15 @@
+.search_margin{
+    margin: 42rpx 18rpx 40rpx 18rpx;
+}
+.search{
+   height:80rpx;
+   width:714rpx;
+   background-color:#F7F7F7;
+   border: 2rpx solid #979797;
+   border-radius:41rpx;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color:#7B7B7B; 
+   font-size: 24rpx;
+}

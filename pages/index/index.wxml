@@ -1,0 +1,8 @@
+<view class="search_margin">
+    <navigator url="/pages/search/search" class="search">
+        搜索法律文本
+    </navigator>
+</view>
+<button bindtap="ToHistory">历史记录</button>
+<button bindtap="ToAllText">所有文本</button>
+<button bindtap="ToAdmin">管理员</button>
